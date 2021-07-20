@@ -11,7 +11,8 @@ RUN apt-get update \
 
 RUN docker-php-ext-install mysqli \ 
 	&& docker-php-ext-install pdo_mysql \
-	&& docker-php-ext-install zip
+	&& docker-php-ext-install zip \
+    && docker-php-ext-install exif
 
 # XenForo2 required extension GMP
 RUN docker-php-ext-configure gmp && docker-php-ext-install gmp
@@ -26,7 +27,7 @@ RUN apt-get install -y --no-install-recommends \
     libmagickwand-dev
 
 # PHP 8 does not include pecl so switch to new module manager pickle
-RUN curl -L --output /tmp/pickle.phar https://github.com/FriendsOfPHP/pickle/releases/download/v0.7.0/pickle.phar \
+RUN curl -L --output /tmp/pickle.phar https://github.com/FriendsOfPHP/pickle/releases/download/v0.7.4/pickle.phar \
     && mv /tmp/pickle.phar /usr/local/bin/pickle \
     && chmod +x /usr/local/bin/pickle
 
