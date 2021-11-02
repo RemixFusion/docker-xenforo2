@@ -11,14 +11,14 @@ Installed:
   * GMP
   * Zip
 - Nginx 1.19.6
-- Mysql: 8.0.23
+- Mariadb: 10.6.3
 
 ### Structure
 
 Put XenForo source code to folder `/xenforo`. Any new add-ons will be stored in folder `/addons`
 
 - XenForo (internal_data, data) store at `.data/xenforo`
-- Mysql data store to `.data/mysql`
+- Mariadb data store to `.data/mariadb`
 - Nginx logging store to `.data/nginx`
 - XenForo add-ons store at `/addons`
 
