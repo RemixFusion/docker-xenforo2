@@ -6,7 +6,7 @@ services:
       context: ./
       dockerfile: nginx.dockerfile
     ports:
-      - "10080:80"
+      - "10080:80" # change port 10080 to any other port
     volumes_from:
       - php
     volumes:
@@ -17,7 +17,7 @@ services:
   php:
     build:
       context: ./
-      dockerfile: php.dockerfile
+      dockerfile: php80.dockerfile # availables php72.dockerfile php80.dockerfile php81.dockerfile
     volumes:
       - ./xenforo:/var/www/html
       - ./addons:/var/www/html/src/addons
@@ -36,4 +36,4 @@ services:
     env_file:
       - .env
     ports:
-      - "33069:3306"
+      - "33069:3306" # change port 33069 to any other port
