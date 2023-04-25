@@ -5,7 +5,6 @@ This is basic docker setup for XenForo 2. Changes by RemixF include:
 - Remapped HTTP port to 8023 (HTTP)
 - Added port 9023 (HTTPS) for SSL
 - Increased file_upload_size in Nginx to 128MB (Supports CloudFlare 100MB limit)
-- 
 
 Installed:
 
