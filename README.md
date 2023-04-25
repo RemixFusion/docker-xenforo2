@@ -29,6 +29,8 @@ Put XenForo source code to folder `/xenforo`. Any new add-ons will be stored in 
 - Nginx logging store to `.data/nginx`
 - XenForo add-ons store at `/addons`
 
+**Please take note of the directory which you use to store files. This directory, unlike most docker containers, uses local storage and if deleted will affect your XenForo installation.**
+
 ### Installation
 
 This requires open port `8023` and `9023` make sure the port was allowed in your environment. You can change the port to any other
