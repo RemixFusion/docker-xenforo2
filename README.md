@@ -1,11 +1,15 @@
 # XenForo 2 with Docker
 #### Changes by RemixF with SSL
 
-This is basic docker setup for XenForo 2.
+This is basic docker setup for XenForo 2. Changes by RemixF include:
+- Remapped HTTP port to 8023 (HTTP)
+- Added port 9023 (HTTPS) for SSL
+- Increased file_upload_size in Nginx to 128MB (Supports CloudFlare 100MB limit)
+- 
 
 Installed:
 
-- PHP 7.2.x, 8.0.x, 8.1.x (Easily switch between php versions)
+- PHP (8.0 Default) 7.2.x, 8.0.x, 8.1.x (Easily switch between php versions)
 
   - Mysqli
   - GD
@@ -28,15 +32,15 @@ Put XenForo source code to folder `/xenforo`. Any new add-ons will be stored in 
 
 ### Installation
 
-This requires open port `10080` make sure the port was allowed in your PC. You can change the port to any other
-by edit the file `docker-compose.yml`
+This requires open port `8023` and `9023` make sure the port was allowed in your environment. You can change the port to any other
+by editing the file `docker-compose.yml`
 
 Clone this repository to your computer then run
 `docker-compose build`
 
 to build images and run `docker-compose up -d` to start web server.
 
-Open browser `http://localhost:10080` and coding...
+Open browser `http://localhost:8023` and begin... (If you have configured a different port, please use this port)
 
 ## Install add-on
 
