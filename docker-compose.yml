@@ -32,7 +32,7 @@ services:
       - ./.data/xenforo/external:/var/www/html/data
       - ./.data/composer:/root/.composer
       - ./certbot/www:/var/www/certbot/:ro
-      - ./certbot/conf/:/etc/letsencrypt/:rw
+      - ./certbot/conf/:/etc/nginx/ssl/:ro
     links:
       - mariadb
     env_file:
