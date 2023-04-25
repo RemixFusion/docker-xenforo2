@@ -6,7 +6,8 @@ services:
       context: ./
       dockerfile: nginx.dockerfile
     ports:
-      - "10080:80" # change port 10080 to any other port
+      - "8023:80" # HTTP Port
+      - "9023:443" # HTTPS Port
     volumes_from:
       - php
     volumes:
